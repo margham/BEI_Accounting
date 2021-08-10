@@ -1,0 +1,276 @@
+Meta_Category_Number,Meta_Category_Name,Category_Number,Category_Name,Month,Amount
+60001,Fees,60000,Bank Service Charges,January,88.88
+60001,Fees,60000,Bank Service Charges,February,3.50
+60001,Fees,60000,Bank Service Charges,March,3.50
+60001,Fees,60000,Bank Service Charges,April,3.50
+60001,Fees,60000,Bank Service Charges,May ,3.50
+60001,Fees,60000,Bank Service Charges,June ,3.50
+60001,Fees,60000,Bank Service Charges,July,3.50
+60001,Fees,60600,Dues and Subscriptions,January,250.00
+60001,Fees,60600,Dues and Subscriptions,February,0.00
+60001,Fees,60600,Dues and Subscriptions,March,2.13
+60001,Fees,60600,Dues and Subscriptions,April,2.13
+60001,Fees,60600,Dues and Subscriptions,May ,2.13
+60001,Fees,60600,Dues and Subscriptions,June ,0.00
+60001,Fees,60600,Dues and Subscriptions,July,0.00
+61001,Equipment Fees,61000,Equipment Rental,January,0.00
+61001,Equipment Fees,61000,Equipment Rental,February,0.00
+61001,Equipment Fees,61000,Equipment Rental,March,0.00
+61001,Equipment Fees,61000,Equipment Rental,April,0.00
+61001,Equipment Fees,61000,Equipment Rental,May ,0.00
+61001,Equipment Fees,61000,Equipment Rental,June ,0.00
+61001,Equipment Fees,61000,Equipment Rental,July,"205.43  
+"
+61301,Freight,61300,Freight and Trucking,January,28.32
+61301,Freight,61300,Freight and Trucking,February,0.00
+61301,Freight,61300,Freight and Trucking,March,0.00
+61301,Freight,61300,Freight and Trucking,April,1011.15
+61301,Freight,61300,Freight and Trucking,May ,0.00
+61301,Freight,61300,Freight and Trucking,June ,0.00
+61301,Freight,61300,Freight and Trucking,July,0.00
+62000,Insurance,62100,Business Insurance,January,13182.48
+62000,Insurance,62100,Business Insurance,February,348.06
+62000,Insurance,62100,Business Insurance,March,0.00
+62000,Insurance,62100,Business Insurance,April,11730.16
+62000,Insurance,62100,Business Insurance,May ,0.00
+62000,Insurance,62100,Business Insurance,June ,0.00
+62000,Insurance,62100,Business Insurance,July,12275.95
+62000,Insurance,62150,Officers' Life Insurance,January,0.00
+62000,Insurance,62150,Officers' Life Insurance,February,18673.10
+62000,Insurance,62150,Officers' Life Insurance,March,0.00
+62000,Insurance,62150,Officers' Life Insurance,April,0.00
+62000,Insurance,62150,Officers' Life Insurance,May ,0.00
+62000,Insurance,62150,Officers' Life Insurance,June ,0.00
+62000,Insurance,62150,Officers' Life Insurance,July,0.00
+63001,Gen Office Supplies,63000,Office Supplies,January,40.00
+63001,Gen Office Supplies,63000,Office Supplies,February,40.00
+63001,Gen Office Supplies,63000,Office Supplies,March,134.26
+63001,Gen Office Supplies,63000,Office Supplies,April,40.00
+63001,Gen Office Supplies,63000,Office Supplies,May ,40.00
+63001,Gen Office Supplies,63000,Office Supplies,June ,40.00
+63001,Gen Office Supplies,63000,Office Supplies,July,0.00
+64001,Payroll,64000,Wages Expense,January,15026.63
+64001,Payroll,64000,Wages Expense,February,14771.15
+64001,Payroll,64000,Wages Expense,March,16283.62
+64001,Payroll,64000,Wages Expense,April,25077.25
+64001,Payroll,64000,Wages Expense,May ,16606.00
+64001,Payroll,64000,Wages Expense,June ,16354.00
+64001,Payroll,64000,Wages Expense,July,16402.22
+64001,Payroll,64300,Payroll Taxes,January,1329.86
+64001,Payroll,64300,Payroll Taxes,February,1293.44
+64001,Payroll,64300,Payroll Taxes,March,1284.06
+64001,Payroll,64300,Payroll Taxes,April,2015.94
+64001,Payroll,64300,Payroll Taxes,May ,1292.11
+64001,Payroll,64300,Payroll Taxes,June ,1251.07
+64001,Payroll,64300,Payroll Taxes,July,4808.18
+64001,Payroll,64500,Payroll Processing Fees,January,143.00
+64001,Payroll,64500,Payroll Processing Fees,February,143.00
+64001,Payroll,64500,Payroll Processing Fees,March,221.24
+64001,Payroll,64500,Payroll Processing Fees,April,252.60
+64001,Payroll,64500,Payroll Processing Fees,May ,168.90
+64001,Payroll,64500,Payroll Processing Fees,June ,168.90
+64001,Payroll,64500,Payroll Processing Fees,July,193.90
+65000,Professional Fees,65300,Accounting,January,214.60
+65000,Professional Fees,65300,Accounting,February,0.00
+65000,Professional Fees,65300,Accounting,March,1190.00
+65000,Professional Fees,65300,Accounting,April,3685.00
+65000,Professional Fees,65300,Accounting,May ,0.00
+65000,Professional Fees,65300,Accounting,June ,150.00
+65000,Professional Fees,65300,Accounting,July,315.00
+65000,Professional Fees,65500,Legal Fees,January,0.00
+65000,Professional Fees,65500,Legal Fees,February,0.00
+65000,Professional Fees,65500,Legal Fees,March,0.00
+65000,Professional Fees,65500,Legal Fees,April,"269.40  
+"
+65000,Professional Fees,65500,Legal Fees,May ,0.00
+65000,Professional Fees,65500,Legal Fees,June ,0.00
+65000,Professional Fees,65500,Legal Fees,July,0.00
+65000,Professional Fees,65700,Licensing and Inspection,January,10.00
+65000,Professional Fees,65700,Licensing and Inspection,February,0.00
+65000,Professional Fees,65700,Licensing and Inspection,March,150.28
+65000,Professional Fees,65700,Licensing and Inspection,April,0.00
+65000,Professional Fees,65700,Licensing and Inspection,May ,0.00
+65000,Professional Fees,65700,Licensing and Inspection,June ,0.00
+65000,Professional Fees,65700,Licensing and Inspection,July,0.00
+66000,Repairs,66300,Building Repairs,January,0.00
+66000,Repairs,66300,Building Repairs,February,0.00
+66000,Repairs,66300,Building Repairs,March,11329.79
+66000,Repairs,66300,Building Repairs,April,304.00
+66000,Repairs,66300,Building Repairs,May ,187.85
+66000,Repairs,66300,Building Repairs,June ,0.00
+66000,Repairs,66300,Building Repairs,July,0.00
+66000,Repairs,66400,Well Repair and Maintenance,January,0.00
+66000,Repairs,66400,Well Repair and Maintenance,February,0.00
+66000,Repairs,66400,Well Repair and Maintenance,March,0.00
+66000,Repairs,66400,Well Repair and Maintenance,April,0.00
+66000,Repairs,66400,Well Repair and Maintenance,May ,0.00
+66000,Repairs,66400,Well Repair and Maintenance,June ,0.00
+66000,Repairs,66400,Well Repair and Maintenance,July,1901.43
+66000,Repairs,66600,Vehicle Repairs and Service,January,44.50
+66000,Repairs,66600,Vehicle Repairs and Service,February,0.00
+66000,Repairs,66600,Vehicle Repairs and Service,March,144.78
+66000,Repairs,66600,Vehicle Repairs and Service,April,0.00
+66000,Repairs,66600,Vehicle Repairs and Service,May ,318.12
+66000,Repairs,66600,Vehicle Repairs and Service,June ,0.00
+66000,Repairs,66600,Vehicle Repairs and Service,July,396.50
+66000,Repairs,66660,Equipment Repair and Service,January,34.31
+66000,Repairs,66660,Equipment Repair and Service,February,2056.70
+66000,Repairs,66660,Equipment Repair and Service,March,2692.08
+66000,Repairs,66660,Equipment Repair and Service,April,7236.78
+66000,Repairs,66660,Equipment Repair and Service,May ,11656.98
+66000,Repairs,66660,Equipment Repair and Service,June ,3914.03
+66000,Repairs,66660,Equipment Repair and Service,July,2258.14
+67000,Supplies,67100,General Farm Supplies,January,398.61
+67000,Supplies,67100,General Farm Supplies,February,2090.24
+67000,Supplies,67100,General Farm Supplies,March,399.55
+67000,Supplies,67100,General Farm Supplies,April,183.33
+67000,Supplies,67100,General Farm Supplies,May ,812.82
+67000,Supplies,67100,General Farm Supplies,June ,28.33
+67000,Supplies,67100,General Farm Supplies,July,163.66
+67000,Supplies,67300,Water Treatment Supplies,January,900.00
+67000,Supplies,67300,Water Treatment Supplies,February,0.00
+67000,Supplies,67300,Water Treatment Supplies,March,736.50
+67000,Supplies,67300,Water Treatment Supplies,April,2150.97
+67000,Supplies,67300,Water Treatment Supplies,May ,2049.40
+67000,Supplies,67300,Water Treatment Supplies,June ,0.00
+67000,Supplies,67300,Water Treatment Supplies,July,0.00
+67000,Supplies,67400,Small Equipment Expense,January,0.00
+67000,Supplies,67400,Small Equipment Expense,February,2000.00
+67000,Supplies,67400,Small Equipment Expense,March,0.00
+67000,Supplies,67400,Small Equipment Expense,April,0.00
+67000,Supplies,67400,Small Equipment Expense,May ,0.00
+67000,Supplies,67400,Small Equipment Expense,June ,0.00
+67000,Supplies,67400,Small Equipment Expense,July,0.00
+67000,Supplies,67500,Testing,January,0.00
+67000,Supplies,67500,Testing,February,0.00
+67000,Supplies,67500,Testing,March,0.00
+67000,Supplies,67500,Testing,April,0.00
+67000,Supplies,67500,Testing,May ,0.00
+67000,Supplies,67500,Testing,June ,33.00
+67000,Supplies,67500,Testing,July,0.00
+68001,Taxes,68000,Property Taxes,January,0.00
+68001,Taxes,68000,Property Taxes,February,0.00
+68001,Taxes,68000,Property Taxes,March,28452.81
+68001,Taxes,68000,Property Taxes,April,0.00
+68001,Taxes,68000,Property Taxes,May ,0.00
+68001,Taxes,68000,Property Taxes,June ,0.00
+68001,Taxes,68000,Property Taxes,July,0.00
+68001,Taxes,68390,Other Taxes,January,0.00
+68001,Taxes,68390,Other Taxes,February,0.00
+68001,Taxes,68390,Other Taxes,March,0.00
+68001,Taxes,68390,Other Taxes,April,1000.00
+68001,Taxes,68390,Other Taxes,May ,0.00
+68001,Taxes,68390,Other Taxes,June ,0.00
+68001,Taxes,68390,Other Taxes,July,0.00
+69001,Communications,69000,Telephone,January,653.02
+69001,Communications,69000,Telephone,February,656.53
+69001,Communications,69000,Telephone,March,693.31
+69001,Communications,69000,Telephone,April,659.14
+69001,Communications,69000,Telephone,May ,669.77
+69001,Communications,69000,Telephone,June ,662.01
+69001,Communications,69000,Telephone,July,710.22
+69200,Utilities,69210,Natural Gas Black Hills,January,27602.55
+69200,Utilities,69210,Natural Gas Black Hills,February,16711.58
+69200,Utilities,69210,Natural Gas Black Hills,March,13066.00
+69200,Utilities,69210,Natural Gas Black Hills,April,12778.00
+69200,Utilities,69210,Natural Gas Black Hills,May ,14683.00
+69200,Utilities,69210,Natural Gas Black Hills,June ,14686.00
+69200,Utilities,69210,Natural Gas Black Hills,July,14686.00
+69200,Utilities,69225,Electricity Norris,January,1699.42
+69200,Utilities,69225,Electricity Norris,February,2327.42
+69200,Utilities,69225,Electricity Norris,March,1909.98
+69200,Utilities,69225,Electricity Norris,April,2439.00
+69200,Utilities,69225,Electricity Norris,May ,4903.00
+69200,Utilities,69225,Electricity Norris,June ,2286.00
+69200,Utilities,69225,Electricity Norris,July,2356.00
+69200,Utilities,69230,Electricity LES,January,2382.67
+69200,Utilities,69230,Electricity LES,February,2560.44
+69200,Utilities,69230,Electricity LES,March,4674.37
+69200,Utilities,69230,Electricity LES,April,1265.01
+69200,Utilities,69230,Electricity LES,May ,2832.41
+69200,Utilities,69230,Electricity LES,June ,3492.16
+69200,Utilities,69230,Electricity LES,July,5256.53
+70001,Vehicle Expenses,70000,Vehicle Expense Gasoline,January,609.50
+70001,Vehicle Expenses,70000,Vehicle Expense Gasoline,February,1636.60
+70001,Vehicle Expenses,70000,Vehicle Expense Gasoline,March,460.56
+70001,Vehicle Expenses,70000,Vehicle Expense Gasoline,April,467.90
+70001,Vehicle Expenses,70000,Vehicle Expense Gasoline,May ,868.97
+70001,Vehicle Expenses,70000,Vehicle Expense Gasoline,June ,632.65
+70001,Vehicle Expenses,70000,Vehicle Expense Gasoline,July,828.89
+70001,Vehicle Expenses,70100,Vehicle Expense Registration,January,0.00
+70001,Vehicle Expenses,70100,Vehicle Expense Registration,February,0.00
+70001,Vehicle Expenses,70100,Vehicle Expense Registration,March,0.00
+70001,Vehicle Expenses,70100,Vehicle Expense Registration,April,0.00
+70001,Vehicle Expenses,70100,Vehicle Expense Registration,May ,1298.51
+70001,Vehicle Expenses,70100,Vehicle Expense Registration,June ,0.00
+70001,Vehicle Expenses,70100,Vehicle Expense Registration,July,0.00
+72001,Contractors,72000,Contracted Services,January,2529.00
+72001,Contractors,72000,Contracted Services,February,1554.00
+72001,Contractors,72000,Contracted Services,March,1800.00
+72001,Contractors,72000,Contracted Services,April,3128.00
+72001,Contractors,72000,Contracted Services,May ,4200.00
+72001,Contractors,72000,Contracted Services,June ,3684.00
+72001,Contractors,72000,Contracted Services,July,2580.09
+72501,Food,72500,Meals,January,42.42
+72501,Food,72500,Meals,February,35.78
+72501,Food,72500,Meals,March,22.64
+72501,Food,72500,Meals,April,72.58
+72501,Food,72500,Meals,May ,34.19
+72501,Food,72500,Meals,June ,68.26
+72501,Food,72500,Meals,July,128.91
+73001,Fuel Tanks,73000,Farm Fuel Tanks,January,0.00
+73001,Fuel Tanks,73000,Farm Fuel Tanks,February,23.30
+73001,Fuel Tanks,73000,Farm Fuel Tanks,March,0.00
+73001,Fuel Tanks,73000,Farm Fuel Tanks,April,1475.34
+73001,Fuel Tanks,73000,Farm Fuel Tanks,May ,189.22
+73001,Fuel Tanks,73000,Farm Fuel Tanks,June ,0.00
+73001,Fuel Tanks,73000,Farm Fuel Tanks,July,32.24
+73501,Farm Lease,73500,Farm Lease Expense,January,134935.86
+73501,Farm Lease,73500,Farm Lease Expense,February,62000.00
+73501,Farm Lease,73500,Farm Lease Expense,March,80000.00
+73501,Farm Lease,73500,Farm Lease Expense,April,63500.00
+73501,Farm Lease,73500,Farm Lease Expense,May ,72000.00
+73501,Farm Lease,73500,Farm Lease Expense,June ,161999.00
+73501,Farm Lease,73500,Farm Lease Expense,July,57000.00
+74501,Bedding,74500,Bedding,January,0.00
+74501,Bedding,74500,Bedding,February,-2813.75
+74501,Bedding,74500,Bedding,March,4172.50
+74501,Bedding,74500,Bedding,April,281.25
+74501,Bedding,74500,Bedding,May ,781.25
+74501,Bedding,74500,Bedding,June ,0.00
+74501,Bedding,74500,Bedding,July,0.00
+75001,Trash and Sanitation,75000,Trash Service,January,152.00
+75001,Trash and Sanitation,75000,Trash Service,February,152.00
+75001,Trash and Sanitation,75000,Trash Service,March,152.00
+75001,Trash and Sanitation,75000,Trash Service,April,152.00
+75001,Trash and Sanitation,75000,Trash Service,May ,152.00
+75001,Trash and Sanitation,75000,Trash Service,June ,152.00
+75001,Trash and Sanitation,75000,Trash Service,July,152.00
+75001,Trash and Sanitation,75100,Sanitation,January,0.00
+75001,Trash and Sanitation,75100,Sanitation,February,0.00
+75001,Trash and Sanitation,75100,Sanitation,March,0.00
+75001,Trash and Sanitation,75100,Sanitation,April,0.00
+75001,Trash and Sanitation,75100,Sanitation,May ,0.00
+75001,Trash and Sanitation,75100,Sanitation,June ,181.46
+75001,Trash and Sanitation,75100,Sanitation,July,0.00
+77001,Road Repair,77000,Road Maintenance,January,0.00
+77001,Road Repair,77000,Road Maintenance,February,0.00
+77001,Road Repair,77000,Road Maintenance,March,935.00
+77001,Road Repair,77000,Road Maintenance,April,0.00
+77001,Road Repair,77000,Road Maintenance,May ,0.00
+77001,Road Repair,77000,Road Maintenance,June ,-935.00
+77001,Road Repair,77000,Road Maintenance,July,0.00
+79001,Misc,79000,Miscellaneous Expense,January,0.00
+79001,Misc,79000,Miscellaneous Expense,February,181.46
+79001,Misc,79000,Miscellaneous Expense,March,362.92
+79001,Misc,79000,Miscellaneous Expense,April,181.46
+79001,Misc,79000,Miscellaneous Expense,May ,181.46
+79001,Misc,79000,Miscellaneous Expense,June ,0.00
+79001,Misc,79000,Miscellaneous Expense,July,181.46
+70011,No Category,70001,Uncategorized Expense,January,0.00
+70011,No Category,70001,Uncategorized Expense,February,0.00
+70011,No Category,70001,Uncategorized Expense,March,0.00
+70011,No Category,70001,Uncategorized Expense,April,1485.23
+70011,No Category,70001,Uncategorized Expense,May ,0.00
+70011,No Category,70001,Uncategorized Expense,June ,0.00
+70011,No Category,70001,Uncategorized Expense,July,0.00

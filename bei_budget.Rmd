@@ -1,0 +1,173 @@
+---
+title: "BEI_Operating_Expenses"
+author: "Beka"
+date: "8/10/2021"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Import Libraries
+```{r }
+library(tidyverse)
+library(ggplot2)
+#install.packages('DT')
+library(DT)
+``` 
+
+
+## Import and Clean Data
+```{r }
+expense <- read.csv("BEI_Operating_Expenses.csv", header = TRUE)
+summary(expense)
+
+#View(expense)
+
+#remove the meta-categories(?)
+
+#change column categories
+expense$Meta_Category_Name = as.factor(expense$Meta_Category_Name)
+expense$Meta_Category_Number = as.factor(expense$Meta_Category_Number)
+expense$Category_Name = as.factor(expense$Category_Name)
+expense$Category_Number = as.factor(expense$Category_Number)
+expense$Month = as.factor(expense$Month)
+#expense$Amount = as.numeric(as.factor(expense$Amount))
+
+summary(expense)
+View(expense)
+``` 
+
+#View the full table by month
+```{r}
+
+#summary by month
+expense_summary <- expense %>% group_by(Category_Name, Category_Number, Month) %>%
+                                  summarise(Cost = sum(Amount))
+
+wide_expense <- pivot_wider(expense_summary, 
+                            names_from = Month, 
+                            values_from = Cost)
+
+#View(wide_expense)
+
+wide_expense[c("Category_Name", "January", "February", "March", "April", "May ", "June ", "July")]
+
+
+#summary by category
+expense_cat <- expense %>% group_by(Category_Name) %>%
+                              summarise(Total = sum(Amount))
+
+#View(expense_cat)
+
+
+#Join expense_cat and wide_expense
+Expense_Summary_1 <- full_join(wide_expense, expense_cat)
+``` 
+
+
+Make a datatable
+```{r}
+
+expense_table <- datatable(Expense_Summary_1, rownames = FALSE, class = 'cell-border stripe')
+
+DT::saveWidget(expense_table, "expense_table.html")
+``` 
+
+
+## Summarize Data using meta-categories
+```{r }
+Meta_Expense_Summary <- expense %>% group_by(Meta_Category_Name, Month, Meta_Category_Number) %>% summarise(cost = sum(Amount))  
+
+View(Meta_Expense_Summary)
+
+wide_meta_expense <- pivot_wider(Meta_Expense_Summary, 
+                            names_from = Month, 
+                            values_from = cost)
+
+wide_meta_expense[c("Meta_Category_Name", "January", "February", "March", "April", "May ", "June ", "July")]
+
+#summary by category
+meta_expense_cat <- expense %>% group_by(Meta_Category_Name) %>%
+                              summarise(Total = sum(Amount))
+
+#Join expense_cat and wide_expense
+Meta_Expense_Summary_1 <- full_join(wide_meta_expense, meta_expense_cat)
+``` 
+
+
+Make a datatable
+```{r}
+
+meta_summary_table <- datatable(Meta_Expense_Summary_1, rownames = FALSE, class = 'cell-border stripe')
+
+DT::saveWidget(meta_summary_table, "meta_summary_table.html")
+``` 
+
+
+Group by Month
+```{r}
+
+#summary by month
+month_expense_summary <- expense %>% group_by(Month) %>%
+                                  summarise(Cost = sum(Amount))
+
+wide_month_expense <- pivot_wider(month_expense_summary, 
+                            names_from = Month, 
+                            values_from = Cost)
+
+#View(month_expense_summary)
+
+wide_month_expense$Category_Name = "Month_total"
+wide_month_expense$Category_Number = "00000"
+wide_month_expense$Total = sum(month_expense_summary$Cost)
+
+
+wide_month_expense <- wide_month_expense[c("Category_Name", "Category_Number", "January", "February", "March", "April", "May ", "June ", "July", "Total")]
+
+View(wide_month_expense)
+
+#summary by category
+#expense_cat <- expense %>% group_by(Category_Name) %>%
+#                              summarise(Total = sum(Amount))
+
+#View(expense_cat)
+
+
+#Join expense_cat and wide_expense
+Month_Expense_Summary_1 <- full_join(wide_month_expense, Expense_Summary_1)
+``` 
+
+
+Make a datatable
+```{r}
+
+month_expense_table <- datatable(Month_Expense_Summary_1, rownames = FALSE, class = 'cell-border stripe')
+
+DT::saveWidget(month_expense_table, "month_expense_table.html")
+``` 
+
+
+## View the average operating expenses by month
+```{r }
+
+average_table <- expense %>% group_by(Category_Name) %>%
+                        summarise(average = mean(Amount),
+                                  sd = sd(Amount))
+
+average_table  
+```
+
+Make a datatable
+```{r}
+
+avg_expense_table <- datatable(average_table, rownames = FALSE, class = 'cell-border stripe')
+
+DT::saveWidget(avg_expense_table, "avg_expense_table.html")
+``` 
+
+
+
