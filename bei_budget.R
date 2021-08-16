@@ -1,26 +1,11 @@
----
-title: "BEI_Operating_Expenses"
-author: "Beka"
-date: "8/10/2021"
-output:
-  pdf_document: default
-  html_document: default
-editor_options:
-  chunk_output_type: console
----
-
-Import Libraries
-```{r }
+## -----------------------------------------------------------------------------
 library(tidyverse)
 library(ggplot2)
 #install.packages('DT')
 library(DT)
-``` 
 
-# EXPENSES
 
-## Import and Clean Data
-```{r }
+## -----------------------------------------------------------------------------
 expense <- read.csv("BEI_Operating_Expenses.csv", header = TRUE)
 summary(expense)
 
@@ -38,10 +23,9 @@ expense$Month = as.factor(expense$Month)
 
 summary(expense)
 View(expense)
-``` 
 
-#View the full table by month
-```{r}
+
+## -----------------------------------------------------------------------------
 
 #summary by month
 expense_summary <- expense %>% group_by(Category_Name, Category_Number, Month) %>%
@@ -65,50 +49,16 @@ expense_cat <- expense %>% group_by(Category_Name) %>%
 
 #Join expense_cat and wide_expense
 Expense_Summary_1 <- full_join(wide_expense, expense_cat)
-``` 
 
 
-Make a datatable
-```{r}
+## -----------------------------------------------------------------------------
 
 expense_table <- datatable(Expense_Summary_1, rownames = FALSE, class = 'cell-border stripe')
 
 DT::saveWidget(expense_table, "expense_table.html")
-``` 
 
 
-## Summarize Data using meta-categories
-```{ r }
-Meta_Expense_Summary <- expense %>% group_by(Meta_Category_Name, Month, Meta_Category_Number) %>% summarise(cost = sum(Amount))  
-
-View(Meta_Expense_Summary)
-
-wide_meta_expense <- pivot_wider(Meta_Expense_Summary, 
-                            names_from = Month, 
-                            values_from = cost)
-
-wide_meta_expense[c("Meta_Category_Name", "January", "February", "March", "April", "May ", "June ", "July")]
-
-#summary by category
-meta_expense_cat <- expense %>% group_by(Meta_Category_Name) %>%
-                              summarise(Total = sum(Amount))
-
-#Join expense_cat and wide_expense
-Meta_Expense_Summary_1 <- full_join(wide_meta_expense, meta_expense_cat)
-``` 
-
-
-Make a datatable
-```{ r}
-
-meta_summary_table <- datatable(Meta_Expense_Summary_1, rownames = FALSE, class = 'cell-border stripe')
-
-DT::saveWidget(meta_summary_table, "meta_summary_table.html")
-``` 
-
-
-Group by Month
-```{r}
+## -----------------------------------------------------------------------------
 
 #summary by month
 month_expense_summary <- expense %>% group_by(Month) %>%
@@ -138,21 +88,17 @@ View(wide_month_expense)
 
 #Join expense_cat and wide_expense
 Month_Expense_Summary_1 <- full_join(wide_month_expense, Expense_Summary_1)
-``` 
 
 
-Make a datatable
-```{r}
+## -----------------------------------------------------------------------------
 
 month_expense_table <- datatable(Month_Expense_Summary_1, rownames = FALSE, class = 'cell-border stripe')
 month_expense_table
 
 DT::saveWidget(month_expense_table, "month_expense_table.html")
-``` 
 
 
-## View the average, min, med, and max operating expenses by month
-```{r }
+## -----------------------------------------------------------------------------
 
 average_table <- expense %>% group_by(Category_Name) %>%
                         summarise(min = min(Amount),
@@ -172,22 +118,17 @@ average_table
 average_table_sub <- average_table[c("Category_Name", "min", "average", "se", "med", "max")]
 
 average_table_sub
-```
 
 
-Make a datatable
-```{r}
+## -----------------------------------------------------------------------------
 avg_expense_table <- datatable(average_table_sub, rownames = FALSE, class = 'cell-border stripe')
 
 avg_expense_table
 
 DT::saveWidget(avg_expense_table, "avg_expense_table.html")
-``` 
 
 
-## Make a graph of expenses
-
-```{r }
+## -----------------------------------------------------------------------------
 expense_plot <- ggplot(expense, aes(x=Category_Name, y=Amount)) +
   geom_point(cex = 2, pch = 1.0,position = position_jitter(w = 0.1, h = 0)) +
   stat_summary(fun.data = 'mean_se', geom = 'errorbar', width = 0.1) +
@@ -206,11 +147,9 @@ all_expenses_plot <-
 all_expenses_plot
 
 ggsave(all_expenses_plot, file = "all_expenses.png")
-``` 
 
 
-## Do the graph again, minus the farm lease expense
-```{r }
+## -----------------------------------------------------------------------------
 expense$Category_Name
   
 expenses_minus_farmlease <- expense[-c(225:231),]
@@ -234,11 +173,9 @@ no_farmlease_expenses_plot <-
 no_farmlease_expenses_plot
 
 ggsave(no_farmlease_expenses_plot, file = "no_farmlease_expenses.png")
-``` 
 
 
-## Make a chart of expensees below 10k
-```{r }
+## -----------------------------------------------------------------------------
 expenses_below_10k <- expense[expense$Amount<10000,]
 summary(expenses_below_10k)
 
@@ -262,11 +199,9 @@ below_10k_expenses_plot <-
 below_10k_expenses_plot
 
 ggsave(below_10k_expenses_plot, file = "below_10k_expenses.png")
-``` 
 
 
-## Average Expenses
-```{r }
+## -----------------------------------------------------------------------------
 names(average_table)
 
 averages <- average_table[,c(1, 3, 4)]
@@ -274,41 +209,30 @@ view(averages)
 
 averages_table <- datatable(averages, rownames = FALSE, class = 'cell-border stripe')
 DT::saveWidget(averages_table, "month_expense_table.html")
-``` 
 
 
-## Budget
-```{r }
+## -----------------------------------------------------------------------------
 projected <- lm(Amount ~ Category_Name, data = expense)
 summary(projected)
 
 ##okay so this was pointless because it does the group intercept 
-```
 
 
-## Average monthly expense
-```{r }
+## -----------------------------------------------------------------------------
 average_monthly_expenses <- mean(month_expense_summary$Cost)
 average_monthly_expenses
-``` 
 
 
-# INCOME
-
-## Import and clean data
-```{r }
+## -----------------------------------------------------------------------------
 income <- read.csv("income_janjuly2021.csv", header = TRUE)
 summary(income)
 
 income$Category_Name = as.factor(income$Category_Name)
 income$Category_Number = as.factor(income$Category_Number)
 income$Month = as.factor(income$Month)
-``` 
 
-## Make summary tables
 
-Summarize by month
-```{r }
+## -----------------------------------------------------------------------------
 #summary by month
 income_summary <- income %>% group_by(Category_Name, Category_Number, Month) %>%
                                   summarise(Cost = sum(Amount))
@@ -338,11 +262,9 @@ month_income_table <- datatable(income_Summary_1, rownames = FALSE, class = 'cel
 
 DT::saveWidget(month_income_table, "month_income_table.html")
 
-``` 
 
 
-Monthly income summary
-```{r }
+## -----------------------------------------------------------------------------
 #summary by month
 month_income_summary <- income %>% group_by(Month) %>%
                                   summarise(Cost = sum(Amount))
@@ -379,18 +301,14 @@ month_income_table <- datatable(Month_income_Summary_1, rownames = FALSE, class 
 month_income_table
 
 DT::saveWidget(month_income_table, "month_income_table.html")
-``` 
 
 
-## Average Monthly Income
-```{r }
+## -----------------------------------------------------------------------------
 average_monthly_income <- mean(month_income_summary$Cost)
 average_monthly_income
-```
 
 
-## View the average, min, med, and max operating income by month
-```{r }
+## -----------------------------------------------------------------------------
 average_income_table <- income %>% group_by(Category_Name) %>%
                         summarise(min = min(Amount),
                                   average = round(mean(Amount), digits=2),
@@ -407,22 +325,17 @@ average_income_table$se = round(average_income_table$sd/(sqrt(7)), digits=2)
 average_income_table <- average_income_table[c("Category_Name", "min", "average", "se", "med", "max")]
 
 average_income_table
-```
 
 
-Make a datatable
-```{r}
+## -----------------------------------------------------------------------------
 avg_income_dattable <- datatable(average_income_table, rownames = FALSE, class = 'cell-border stripe')
 
 avg_income_dattable
 
 DT::saveWidget(avg_income_dattable, "avg_income_table.html")
-``` 
 
 
-## Make some graphs
-
-```{r }
+## -----------------------------------------------------------------------------
 income_plot <- ggplot(income, aes(x=Category_Name, y=Amount)) +
   geom_point(cex = 2, pch = 1.0,position = position_jitter(w = 0.1, h = 0)) +
   stat_summary(fun.data = 'mean_se', geom = 'errorbar', width = 0.1) +
@@ -441,15 +354,8 @@ all_income_plot <-
 all_income_plot
 
 ggsave(all_income_plot, file = "all_income.png")
-``` 
 
 
-## Income less Expenses
-```{r }
+## -----------------------------------------------------------------------------
 average_monthly_income - average_monthly_expenses
-``` 
-
-The average monthly income less expenses is $-8267.261
-**This does not include depreciation expenses, only operating expenses
-
 

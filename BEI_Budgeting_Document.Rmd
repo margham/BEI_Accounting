@@ -1,0 +1,105 @@
+---
+title: "Monthly Budgeting Information"
+author: "Beka"
+date: "8/11/2021"
+output:
+  html_document:
+    df_print: paged
+  pdf_document:
+    df_print: kable
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+source(knitr::purl("bei_budget.rmd", quiet=TRUE))
+```
+
+# Monthly Operating Income and Expenses, BEI January - July 2021
+
+## Monthly Expenses
+
+* For an overview of expenses by month and category see [Monthly Expense Datatable](https://rpubs.com/BEI_BB/monthly_expenses)
+  * this table provides an overview of all expenses, sorted by expense category and month.
+
+* For a summary of monthly expenses by category for the period of January - July 2021 see [Monthly Expenses by Category](https://rpubs.com/BEI_BB/expenses_summary)
+  * this table provides information on the minimum, average, and maximum amounts spent in each category, along with the standard error around the estimate of the average amount spent.
+
+
+### Monthly Expenses Graphs
+
+#### All expenses, including farm lease expense which includes owners draws
+
+```{r echo=FALSE, message=FALSE}
+all_expenses_plot
+``` 
+
+
+#### All expenses minus farm lease expenses
+
+```{r echo=FALSE, message=FALSE}
+no_farmlease_expenses_plot
+``` 
+
+
+#### All expenses below $10k
+
+```{r echo=FALSE, message=FALSE}
+below_10k_expenses_plot
+```
+
+
+#### Average Monthly Expenses:
+
+```{r echo=FALSE, message=FALSE}
+average_monthly_expenses
+```
+
+* **NOTE** Average expenses shown here do not include depreciation (total of 45500 over the period January - July 2021) or interest expense (121.36 total over the period of January - July 2021).
+
+
+## Monthly Income
+
+* For an overview of income by month and category see [Monthly Income Datatable](https://rpubs.com/BEI_BB/monthly_income)
+  * this table shows income sorted by month and income category. 
+
+
+* For summary statistics on monthly income by category (for the period of January - July 2021) see [Average Income by Category](https://rpubs.com/BEI_BB/average_income)
+  * this table provides information on the minimum, average, and maximum amounts of income in each category, along with the standard error around the estimate of the average.
+
+
+
+### Monthly Income Graph
+
+#### All income, minus 'other' category ($44,776.93 total, from tax return and deposit from Hippo)
+
+```{r echo=FALSE, message=FALSE}
+all_income_plot
+``` 
+
+
+#### Average monthly income (minus the 'other' category):
+
+```{r echo=FALSE, message=FALSE}
+average_monthly_income
+```
+
+
+#### Average monthly income less expenses (excluding the 'other' income and 'other' expenses):
+
+```{r echo=FALSE, message=FALSE}
+average_monthly_income - average_monthly_expenses
+``` 
+
+
+#### Total 'other' income less 'other' expenses for the period January - July 2021: **-844.43**
+
+
+### Spending projection 
+* **NOTE** this is simply the average spent over the period January - July 2021
+
+```{r echo=FALSE, message=FALSE}
+as.data.frame(averages[order(-averages$average),])
+``` 
+
+
